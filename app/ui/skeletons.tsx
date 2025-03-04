@@ -44,6 +44,28 @@ export function RevenueChartSkeleton() {
   );
 }
 
+export function SearchSkeleton() {
+  return (
+    <div className="h-10 w-10 rounded-md bg-gray-100" />
+  );
+}
+
+export function InvoicesPageSkeleton() {
+  return (
+    <>
+      <div
+        className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`}
+      />
+      <div className="mt-4 flex items-center justify-between gap-2 md:mt-8 bg-gray-100">
+        <SearchSkeleton />
+      </div>
+      <div className="mt-6 flow-root">
+        <InvoicesTableSkeleton />
+      </div>
+    </>
+  );
+}
+
 export function InvoiceSkeleton() {
   return (
     <div className="flex flex-row items-center justify-between border-b border-gray-100 py-4">
@@ -215,4 +237,20 @@ export function InvoicesTableSkeleton() {
       </div>
     </div>
   );
+}
+
+export function CustomersPageSkeleton() {
+  return (
+    <>
+      <div
+        className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`}
+      />
+      <div className="mt-4 flex items-center justify-between gap-2 md:mt-8 bg-gray-100">
+        <SearchSkeleton />
+      </div>
+      <div className="mt-6 flow-root">
+        <InvoicesTableSkeleton />
+      </div>
+    </>
+  )
 }
